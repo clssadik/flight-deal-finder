@@ -2,9 +2,11 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 from data_manager import DataManager
+from pprint import pprint
+import requests_cache
 
 SERP_API = os.environ["SERP_API"]
 
 data_manager = DataManager()
 sheets_data = data_manager.get_data()
-print(sheets_data)
+pprint(sheets_data)
