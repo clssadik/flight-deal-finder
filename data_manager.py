@@ -3,8 +3,6 @@ from dotenv import load_dotenv
 load_dotenv()
 import requests
 import requests_cache
-from datetime import datetime, timedelta
-
 
 class DataManager:
     
@@ -12,7 +10,7 @@ class DataManager:
         self.SHEETY_AUTH = os.environ["SHEETY_AUTH"]
         self.SHEETY_URL = "https://api.sheety.co/0473906867a46fc610805d81714a83fa/flightDeals/prices"
     
-    def get_data(self):
+    def get_google_sheets_data(self):
         
         sheets_headers = {
             "Authorization" : self.SHEETY_AUTH,
