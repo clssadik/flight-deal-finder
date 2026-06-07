@@ -3,6 +3,8 @@ from dotenv import load_dotenv
 load_dotenv()
 import requests
 import requests_cache
+from datetime import datetime, timedelta
+
 
 class DataManager:
     
